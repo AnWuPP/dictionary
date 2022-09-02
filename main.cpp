@@ -7,7 +7,7 @@ template<class Key>
 class not_found : public not_found_exception<Key>
 {
 public:
-    not_found() = default;
+    not_found() = delete;
     not_found(Key in_key) : _key(in_key) { }
     const Key& get_key() const noexcept override
     {
